@@ -43,10 +43,8 @@ def main():
 
     # Variational Inference Approximation of Gaussian Process
     bnn = BayesianNeuralNetwork(neurons_hidden_layer=100, initializer='normal', sigma_observation_noise=0.1,
-                                sigma_w1=0.05, sigma_b1=0.05,
-                                sigma_w2=0.05, sigma_b2=0.05,
-                                sigma_w3=0.05, sigma_b3=0.05,
-                                sigma_w4=0.05)
+                                sigma_w1=0.01, sigma_b1=0.01,
+                                sigma_w2=0.02)
     bnn.train(x_train, y_train, train_steps=20000)
 
     # calculate mean and variance function
